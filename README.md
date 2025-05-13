@@ -11,7 +11,7 @@
 | IP_BLACKLIST_REGEX     | ×   |       | (192.168.0.1)                                  | IP 黑名单正则表达式         |
 | REGION_WHITELIST_REGEX | ×   |       | (JP)                                           | 地区白名单正则表达式          |
 | REGION_BLACKLIST_REGEX | ×   |       | (JP)                                           | 地区黑名单正则表达式          |
-| URL302                 | ×   |       | https://github.com/Emokui/Sukuna | 302 跳转地址            |
+| URL302                 | ×   |       | https://github.com/jonssonyan/cf-workers-proxy | 302 跳转地址            |
 | DEBUG                  | ×   | false | false                                          | 开启调试                |
 
 
