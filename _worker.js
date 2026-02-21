@@ -120,6 +120,7 @@ export default {
         IP_BLACKLIST_REGEX,
         REGION_WHITELIST_REGEX,
         REGION_BLACKLIST_REGEX,
+        KEEP_PATH = false,
         DEBUG = false,
       } = env;
       const url = new URL(request.url);
@@ -154,7 +155,11 @@ export default {
       ) {
         logError(request, "Invalid");
         return URL302
-          ? Response.redirect(URL302, 302)
+          ? Response.redirect(KEEP_PATH
+            ? (URL302 + "/" + url.pathname).replace(/\/+/g, '/')
+            : URL302,
+             302
+            )
           : new Response(await nginx(), {
               headers: {
                 "Content-Type": "text/html; charset=utf-8",
